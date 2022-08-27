@@ -4,3 +4,9 @@ body {
     margin: auto;
     max-width: 600px;
 }
+
+article + article {
+    margin-bottom: 60px;
+    padding-top: 60px;
+    border-top: 1px solid #cbd5e0;
+}

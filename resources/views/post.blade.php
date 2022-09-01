@@ -1,9 +1,6 @@
-<!DOCTYPE html>
+@extends('layout')
 
-<title>Single post</title>
-<link rel="stylesheet" href="/app.css"/>
-
-<body>
+@section('content')
     <article>
         <h1>
             {{ $post->title }}
@@ -14,4 +11,4 @@
     </article>
 
     <a href="/">Go Home</a>
-</body>
+@endsection('content')

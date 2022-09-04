@@ -4,6 +4,7 @@ body {
     color: #2d3748;
     margin: auto;
     max-width: 600px;
+    line-height: 1.5;
 }
 
 article + article {

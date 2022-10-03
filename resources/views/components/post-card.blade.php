@@ -10,7 +10,7 @@
         <div class="mt-8 flex flex-col justify-between">
             <header>
                 <div class="space-x-2">
-                    <x-category-button :category="$post->category" />
+                    <x-category-button :category="$post->category"/>
                 </div>
 
                 <div class="mt-4">
@@ -22,10 +22,8 @@
                 </div>
             </header>
 
-            <div class="text-sm mt-4">
-                <p>
-                    {{ $post->excerpt }}
-                </p>
+            <div class="text-sm mt-4 space-y-4">
+                {!! $post->excerpt !!}
             </div>
 
             <footer class="flex justify-between items-center mt-8">
@@ -33,7 +31,6 @@
                     <img src="/images/lary-avatar.svg" alt="Lary avatar">
                     <div class="ml-3">
                         <h5 class="font-bold">{{ $post->author->name }}</h5>
-                        <h6>Mascot at Laracasts</h6>
                     </div>
                 </div>
 

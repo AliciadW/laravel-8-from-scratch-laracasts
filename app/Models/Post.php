@@ -10,6 +10,7 @@ class Post extends Model
     use HasFactory;
 
     protected $guarded = [];
+
     // protected $guarded = ['id'];
     // protected $fillable = ['title', 'body', 'excerpt'];
 
@@ -17,6 +18,15 @@ class Post extends Model
     // {
     //     return 'slug';
     // }
+
+    public function scopeFilter($query)
+    {
+        if (request('search')) {
+            $query
+                ->where('title', 'like', '%' . request('search') . '%')
+                ->orWhere('body', 'like', '%' . request('search') . '%');
+        }
+    }
 
     public function category()
     {

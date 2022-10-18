@@ -12,9 +12,9 @@
             </header>
 
             <div class="mt-4">
-                                    <textarea name="body" class="w-full text-sm" rows="5"
-                                              placeholder="This is a silly placeholder!"
-                                              required></textarea>
+                <textarea name="body" class="w-full text-sm" rows="5"
+                          placeholder="This is a silly placeholder!"
+                          required></textarea>
 
 
                 @error('body')

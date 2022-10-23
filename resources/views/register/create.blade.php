@@ -8,8 +8,8 @@
 
                 <x-form.input name="name"></x-form.input>
                 <x-form.input name="username"></x-form.input>
-                <x-form.input name="email"></x-form.input>
-                <x-form.input name="password" type="password"></x-form.input>
+                <x-form.input name="email" type="email"></x-form.input>
+                <x-form.input name="password" type="password" auto-complete="new-password"></x-form.input>
 
                 <x-form.button>Submit</x-form.button>
             </form>

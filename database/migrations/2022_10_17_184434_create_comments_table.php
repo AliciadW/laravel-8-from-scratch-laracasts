@@ -14,8 +14,11 @@ return new class extends Migration {
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('post_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            // TODO: WHy does this make migrations fail?
+            // $table->foreignId('post_id')->constrained()->cascadeOnDelete();
+            // $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('post_id');
+            $table->foreignId('user_id');
             $table->text('body');
             $table->timestamps();
         });

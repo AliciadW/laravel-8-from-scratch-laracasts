@@ -12,18 +12,13 @@
             </header>
 
             <div class="mt-4">
-                <textarea name="body" class="w-full text-sm" rows="5"
-                          placeholder="This is a silly placeholder!"
-                          required></textarea>
+                <x-form.textarea name="body" placeholder="This is a silly placeholder!"></x-form.textarea>
 
-
-                @error('body')
-                <span class="text-xs text-red-500">{{ $message }}</span>
-                @enderror
+                <x-form.error name="body"></x-form.error>
             </div>
 
-            <div class="flex justify-end mt-6 border-t border-gray-200 pt-3">
-                <x-primary-button>Post</x-primary-button>
+            <div class="flex justify-end border-t border-gray-200 pt-3">
+                <x-form.button>Post</x-form.button>
             </div>
 
         </form>

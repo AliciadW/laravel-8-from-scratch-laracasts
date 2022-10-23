@@ -10,7 +10,7 @@
     </x-slot>
 
     <x-dropdown-item href="/?{{ http_build_query(request()->except('category', 'page')) }}"
-                     :active="request()->routeIs('home')">
+                     :active="request()->routeIs('home') && is_null(request()->getQueryString())">
         All
     </x-dropdown-item>
 

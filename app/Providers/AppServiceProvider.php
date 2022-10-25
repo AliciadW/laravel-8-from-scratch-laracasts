@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\User;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 
 use App\Services\Newsletter;
@@ -39,5 +42,13 @@ class AppServiceProvider extends ServiceProvider
     {
         // Paginator::useTailwind();
         // This is the default, so we don't need to update it, but this is where you will update and specify specific usages
+
+        Gate::define('admin', function (User $user) {
+            return $user->username === 'janeD';
+        });
+
+        Blade::if('admin', function () {
+            return request()->user()?->can('admin');
+        });
     }
 }
